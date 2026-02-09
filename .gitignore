@@ -1,0 +1,42 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ========================
+# Virtual Environment
+# ========================
+venv/
+.env/
+
+# ========================
+# Streamlit
+# ========================
+.streamlit/
+
+# ========================
+# OS Files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# IDE / Editor
+# ========================
+.vscode/
+.idea/
+
+# ========================
+# Logs
+# ========================
+*.log
+
+# ========================
+# Model & Large Files (OPTIONAL)
+# ========================
+# Uncomment below if model size is very large (>100MB)
+# outputs/models/*.h5
+# outputs/models/*.keras
