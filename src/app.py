@@ -105,10 +105,7 @@ if mode == "📤 Upload Image & Predict":
             st.write(f"**Recyclable:** {info['recyclable']}")
             st.write(f"**Recommended Bin:** {info['action']}")
             st.write(f"**Note:** {info['note']}")
-st.warning(
-    "Live camera works only on local machine. "
-    "Streamlit Cloud supports image upload mode only."
-)
+            st.warning("Live camera works only on local machine. " "Streamlit Cloud supports image upload mode only.")
 # =========================================================
 # MODE 2: LIVE CAMERA (LOCAL USE)
 # =========================================================
