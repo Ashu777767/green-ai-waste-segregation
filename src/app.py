@@ -1,7 +1,6 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
-import cv2
 from PIL import Image
 
 # =====================
@@ -63,9 +62,7 @@ st.set_page_config(
 )
 
 st.title("♻️ Green AI–Based Smart Waste Segregation System")
-st.markdown(
-    "### Intelligent waste classification with sustainable recycling guidance 🌱"
-)
+st.markdown("### Intelligent waste classification with sustainable recycling guidance 🌱")
 st.markdown("---")
 
 # =====================
@@ -77,7 +74,7 @@ mode = st.sidebar.radio(
 )
 
 # =========================================================
-# MODE 1: IMAGE UPLOAD
+# MODE 1: IMAGE UPLOAD (CLOUD + LOCAL)
 # =========================================================
 if mode == "📤 Upload Image & Predict":
     st.header("📤 Upload Waste Image")
@@ -105,11 +102,23 @@ if mode == "📤 Upload Image & Predict":
             st.write(f"**Recyclable:** {info['recyclable']}")
             st.write(f"**Recommended Bin:** {info['action']}")
             st.write(f"**Note:** {info['note']}")
-            st.warning("Live camera works only on local machine. " "Streamlit Cloud supports image upload mode only.")
+
+    st.warning(
+        "Live camera works only on local machine. "
+        "Streamlit Cloud supports image upload mode only."
+    )
+
 # =========================================================
-# MODE 2: LIVE CAMERA (LOCAL USE)
+# MODE 2: LIVE CAMERA (LOCAL ONLY)
 # =========================================================
 elif mode == "🎥 Live Camera Classification":
+
+    try:
+        import cv2
+    except ImportError:
+        st.error("Live Camera is not supported on Streamlit Cloud.")
+        st.stop()
+
     st.header("🎥 Live Camera Waste Classification")
 
     st.info(
