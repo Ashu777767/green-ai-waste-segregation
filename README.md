@@ -3,7 +3,7 @@
 This project is a **Green AI–based application** that uses **Computer Vision** and **Deep Learning** to classify waste and provide smart recycling guidance.
 
 The system identifies whether a waste item is **Biodegradable** or **Non-Biodegradable** and suggests appropriate recycling or disposal actions.
-
+Author Name:Ashutosh kumar jha
 ---
 
 ## 🔍 Problem Statement
