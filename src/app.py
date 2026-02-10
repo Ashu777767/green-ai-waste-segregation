@@ -7,7 +7,8 @@ from PIL import Image
 # CONFIG
 # =====================
 IMG_SIZE = (224, 224)
-MODEL_PATH = "outputs/models/waste_classifier.keras"
+MODEL_PATH = "outputs/models/waste_classifier.h5"
+
 
 # =====================
 # SMART GREEN LOGIC
